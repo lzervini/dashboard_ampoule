@@ -28,10 +28,25 @@
 
     <?php
 
-$sql= 'SELECT id , date_changement , etage , position , puissance_ampoule , marque_ampoule FROM ampoule';
-$sth= $dbh->prepare($sql);
-$sth->execute();
-$result= $sth->fetchAll(PDO::FETCH_ASSOC);
+    $sql= 'SELECT id , date_changement , etage , position , puissance_ampoule , marque_ampoule FROM ampoule';
+    $sth= $dbh->prepare($sql);
+    $sth->execute();
+    $result= $sth->fetchAll(PDO::FETCH_ASSOC);
+
+
+    foreach($result as $row){
+        echo '<tr>';
+        echo '<td>'.$row['id'].'</td>';
+        echo '<td>'.$row['date_changement'].'</td>';
+        echo '<td>'.$row['etage'].'</td>';
+        echo '<td>'.$row['position'].'</td>';
+        echo '<td>'.$row['puissance_ampoule'].'</td>';
+        echo '<td>'.$row['marque_ampoule'].'</td>';
+        echo '<td><a href="modify.php?modify=id='.$row['id'].'">Modifier</a></td>';
+        echo '<td><a href="delete.php?id='.$row['id'].'">Supprimer</a></td>';
+
+    }
+?>
     </table>
 </body>
 </html>
