@@ -1,5 +1,14 @@
 <?php
-    require_once('database.php')
+    require_once('database.php');
+
+    $id= '';
+    $dateChange= '';
+    $etage= '';
+    $position= '';
+    $puissance= '';
+    $marque='';
+    
+    $error= false;
 ?>
 
 
