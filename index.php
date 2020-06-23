@@ -25,6 +25,13 @@
         <div>
             <p><a href="modify.php">Ajouter</a></p>
     </div>
+
+    <?php
+
+$sql= 'SELECT id , date_changement , etage , position , puissance_ampoule , marque_ampoule FROM ampoule';
+$sth= $dbh->prepare($sql);
+$sth->execute();
+$result= $sth->fetchAll(PDO::FETCH_ASSOC);
     </table>
 </body>
 </html>
