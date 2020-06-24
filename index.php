@@ -23,7 +23,7 @@
             <th>Supprimer</th>
         </tr>
         <div>
-            <p><a href="modify.php">Ajouter</a></p>
+        <p><a href="modify.php">Ajouter</a></p>
     </div>
 
     <?php
@@ -42,11 +42,22 @@
         echo '<td>'.$row['position'].'</td>';
         echo '<td>'.$row['puissance_ampoule'].'</td>';
         echo '<td>'.$row['marque_ampoule'].'</td>';
-        echo '<td><a href="modify.php?modify=id='.$row['id'].'">Modifier</a></td>';
+        echo '<td><a href="modify.php?edit=1&id='.$row['id'].'">Modifier</a></td>';
         echo '<td><a href="delete.php?id='.$row['id'].'">Supprimer</a></td>';
 
     }
+
+
 ?>
     </table>
+
+    <?php
+    if (count($result)===0){
+            echo'<p>Il n\'y a aucune donnée à afficher</p>';
+        }
+    ?>
+
+
+
 </body>
 </html>
