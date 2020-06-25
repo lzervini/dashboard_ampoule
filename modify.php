@@ -11,7 +11,7 @@
 
 
     if(isset($_GET['id']) && isset($_GET['edit'])){
-        $sql= 'SELECT id , date_changement , etage , position , puissance_ampoule , marque_ampoule FROM ampoule WHERE id=:"id"';
+        $sql= 'SELECT id, date_changement, etage, position, puissance_ampoule, marque_ampoule FROM ampoule WHERE id=:id';
         $sth = $dbh->prepare($sql);
         $sth->bindParam(':id', $_GET['id'], PDO::PARAM_INT);
         $sth->execute();
@@ -67,7 +67,7 @@
         
         if( $error === false){
             if(isset($_POST['edit']) && isset($_POST['id'])){
-                $sql= 'UPDATE ampoule set date_changement=:date_changement , etage=:etage , position=:position , puissance_ampoule=:puissance , marque_ampoule=:marque WHERE id=:id';
+                $sql= 'UPDATE ampoule set date_changement=:date_changement, etage=:etage, position=:position, puissance_ampoule=:puissance, marque_ampoule=:marque WHERE id=:id';
     
             }else{
                 $sql= 'INSERT INTO ampoule(date_changement,etage,position,puissance_ampoule,marque_ampoule) VALUES(:date_changement,:etage,:position,:puissance,:marque)';
@@ -98,19 +98,19 @@
     <h1>Modifier</h1>
     <form action='' method='POST'>
         <div>
-            Date du changement d'ampoule: <input type="date" name='date_changement' id='date_changement' placeholder="Date" value="<?=$dateChange;?>">
+            Date du changement d'ampoule: <input type="date" name='date_changement' id='date_changement' placeholder="Date" value="<?=$dateChange; ?>">
         </div>
         <div>
-            Numéro de l'étage :<input type="text" name='etage' id='etage' placeholder="Étage" value="<?=$etage;?>">
+            Numéro de l'étage :<input type="text" name='etage' id='etage' placeholder="Étage" value="<?=$etage; ?>">
         </div>
         <div>
-            Position de l'ampoule : <input type="text" name='position' id='position' placeholder="Position" value="<?=$position;?>">
+            Position de l'ampoule : <input type="text" name='position' id='position' placeholder="Position" value="<?=$position; ?>">
         </div>
         <div>
-            Puissance de l'ampoule : <input type="text" name='puissance_ampoule' id='puissance_ampoule' placeholder="Puissance" value="<?=$puissance;?>">
+            Puissance de l'ampoule : <input type="text" name='puissance_ampoule' id='puissance_ampoule' placeholder="Puissance" value="<?=$puissance; ?>">
         </div>
         <div>
-            Marque de l'ampoule : <input type="text" name='marque_ampoule' id='marque_ampoule' placeholder="Marque" value="<?=$marque;?>">
+            Marque de l'ampoule : <input type="text" name='marque_ampoule' id='marque_ampoule' placeholder="Marque" value="<?=$marque; ?>">
         </div>
         <div>
         <?php
