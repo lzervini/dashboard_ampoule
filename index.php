@@ -28,7 +28,7 @@
 
     <?php
 
-    $sql= 'SELECT id , date_changement , etage , position , puissance_ampoule , marque_ampoule FROM ampoule';
+    $sql= 'SELECT id, date_changement , etage, position, puissance_ampoule, marque_ampoule FROM ampoule';
     $sth= $dbh->prepare($sql);
     $sth->execute();
     $result= $sth->fetchAll(PDO::FETCH_ASSOC);
@@ -55,6 +55,10 @@
     if (count($result)===0){
             echo'<p>Il n\'y a aucune donnée à afficher</p>';
         }
+
+       if(count($result)){
+           echo'<p>Modification effectuée</p>';
+
     ?>
 
 
