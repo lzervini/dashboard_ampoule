@@ -83,6 +83,9 @@
             $sth->bindParam(':id', $id, PDO::PARAM_INT);    
         }
         $sth->execute();
+
+        header('Location: index.php');
+
     }
 }
 
