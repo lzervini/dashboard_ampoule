@@ -33,11 +33,13 @@
     $sth->execute();
     $result= $sth->fetchAll(PDO::FETCH_ASSOC);
 
+    $intlDateFormatter = new IntlDateFormatter('fr_FR', IntlDateFormatter::SHORT, IntlDateFormatter::NONE);
+
 
     foreach($result as $row){
         echo '<tr>';
         echo '<td>'.$row['id'].'</td>';
-        echo '<td>'.$row['date_changement'].'</td>';
+        echo '<td>'.$intlDateFormatter->format(strtotime($row['date_changement'])). '</td>';
         echo '<td>'.$row['etage'].'</td>';
         echo '<td>'.$row['position'].'</td>';
         echo '<td>'.$row['puissance_ampoule'].'</td>';
@@ -58,7 +60,7 @@
 
        if(count($result)){
            echo'<p>Modification effectuée</p>';
-
+       }
     ?>
 
 

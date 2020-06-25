@@ -74,7 +74,7 @@
             }
             $sth= $dbh->prepare($sql);
 
-        $sth->bindParam(':date_changement', $dateChange, PDO::PARAM_STR);
+        $sth->bindParam(':date_changement', strftime("%Y-%m-%d" , strtotime($dateChange)), PDO::PARAM_STR);
         $sth->bindParam(':etage', $etage, PDO::PARAM_STR);
         $sth->bindParam(':position', $position, PDO::PARAM_STR);
         $sth->bindParam(':puissance', $puissance, PDO::PARAM_STR);
@@ -98,7 +98,8 @@
     <title>Modification pour le changement d'ampoule</title>
 </head>
 <body>
-    <h1>Modifier</h1>
+
+
     <form action='' method='POST'>
         <div>
             Date du changement d'ampoule: <input type="date" name='date_changement' id='date_changement' placeholder="Date" value="<?=$dateChange; ?>">
