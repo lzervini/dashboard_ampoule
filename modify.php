@@ -105,7 +105,8 @@
 </head>
 <body>
 
-<div class="edit-container border rounded-lg offset-lg-4 col-md-4">
+<div class=" shadow bg-white rounded-lg offset-lg-4 col-lg-4 p-0 ">
+    <div >
     <?php
                 if (isset($_GET['id']) && isset($_GET['edit'])){
                     $edadd= "Modifier les données";
@@ -113,11 +114,13 @@
                     $edadd= "Ajouter un changement d'ampoule";
                 }
             ?>
-                <h1><?=$edadd ?></h1> 
-    <form action='' method='POST' class="offset-lg-3 col-md-6">
+                <h1 class="offset-lg-2 col-lg-8 p-3"><?=$edadd ?></h1> 
+    <form action='' method='POST' class=" offset-lg-3 col-lg-6 p-3  ">
+        
         <div>
-            Date du changement d'ampoule: <input type="date" name='date_changement' id='date_changement' placeholder="Date" value="<?=$dateChange; ?>" class="form-control">
+            Date du changement d'ampoule: <input type="date" name='date_changement' id='date_changement' placeholder="Date" value="<?=$dateChange; ?>" class="form-control ">
         </div>
+        
         <div>
             Numéro de l'étage :<input type="text" name='etage' id='etage' placeholder="Étage" value="<?=$etage; ?>" class="form-control">
         </div>
@@ -131,7 +134,7 @@
             Marque de l'ampoule : <input type="text" name='marque_ampoule' id='marque_ampoule' placeholder="Marque" value="<?=$marque; ?>" class="form-control">
         </div>
         <br>
-        <div>
+        <div class="text-center">
         <?php
                 if (isset($_GET['id']) && isset($_GET['edit'])){
                     $button= "Modifier";
@@ -139,7 +142,7 @@
                     $button= "Ajouter";
                 }
             ?>
-                <button type="submit" class="btn btn-outline-primary"><?=$button ?></button> 
+                <button type="submit" class="btn btn-outline-primary btn-lg btn-block center rounded-pill "><?=$button ?></button> 
         </div>  
             <?php
                 if (isset($_GET['id']) && isset($_GET['edit'])){
@@ -150,6 +153,7 @@
                 }
             ?>
     </form>
+            </div>
  </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
