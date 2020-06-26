@@ -111,7 +111,7 @@
                 if (isset($_GET['id']) && isset($_GET['edit'])){
                     $edadd= "Modifier les données";
                 }else{
-                    $edadd= "Ajouter un changement d'ampoule";
+                    $edadd= "Ajouter un changement";
                 }
             ?>
                 <h1 class="offset-lg-2 col-lg-8 p-3"><?=$edadd ?></h1> 
@@ -122,7 +122,18 @@
         </div>
         
         <div>
-            Numéro de l'étage :<input type="text" name='etage' id='etage' placeholder="Étage" value="<?=$etage; ?>" class="form-control">
+            Numéro de l'étage :
+            <select type="text" name='etage' id='etage' placeholder="Étage" value="<?=$etage; ?>" class="form-control">
+                <option value="RDC">RDC</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
         </div>
         <div>
             Position de l'ampoule : <input type="text" name='position' id='position' placeholder="Position" value="<?=$position; ?>" class="form-control">
@@ -152,6 +163,7 @@
             <?php
                 }
             ?>
+
     </form>
             </div>
  </div>
