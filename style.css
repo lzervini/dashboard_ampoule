@@ -5,17 +5,17 @@ body{
 
 .btn-outline-primary{
     color: black;
-    border-color: #79c6ab;
+    border-color: #474046;
 }
 
 .btn-outline-primary:hover {
         color: black;
-        background-color: #79c6ab;
-        border-color: #79c6ab;
+        background-color: #e29578;
+        border-color: #e29578;
 }
 
 .container{
-    background-color:#8888ac ;
+    background-color:#ffddd2 ;
 }
 /*
 table{
