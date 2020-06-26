@@ -11,6 +11,8 @@ h1{
     text-align: center;
 }
 
+
+
 .btn-outline-primary{
     background-color: #c7efcf;
     color: black;
@@ -19,9 +21,13 @@ h1{
 
 .btn-outline-primary:hover {
         color: black;
-        background-color: #eef5db;
-        border-color: #eef5db;
+        background-color: #8980f5;
+        border-color: #8980f5;
         color: black;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus, .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-outline-primary.dropdown-toggle:focus{
+    box-shadow: none;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show > .btn-outline-primary.dropdown-toggle{
@@ -31,6 +37,20 @@ h1{
 
 .btn-outline-primary.focus, .btn-outline-primary:focus{
     box-shadow:none ;
+}
+
+button a{
+    color: black;
+}
+
+.add a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+button img{
+    vertical-align:middle;
+    padding-right: 10px;
 }
 
 .formcolor{
