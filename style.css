@@ -41,6 +41,14 @@ background-color: #eef5db;
     padding: $spacer !important;
   }
 
+
+.table{
+    background-color: #fff;
+}
+
+.theadcolor{
+background-color: #c7efcf;}
+
 /*
 table{
     border-spacing: 1; 
