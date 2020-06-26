@@ -105,8 +105,16 @@
 </head>
 <body>
 
-<div class="container border rounded-lg ">
-    <form action='' method='POST' class="offset-lg-4 col-md-4">
+<div class="edit-container border rounded-lg offset-lg-4 col-md-4">
+    <?php
+                if (isset($_GET['id']) && isset($_GET['edit'])){
+                    $edadd= "Modifier les données";
+                }else{
+                    $edadd= "Ajouter un changement d'ampoule";
+                }
+            ?>
+                <h1><?=$edadd ?></h1> 
+    <form action='' method='POST' class="offset-lg-3 col-md-6">
         <div>
             Date du changement d'ampoule: <input type="date" name='date_changement' id='date_changement' placeholder="Date" value="<?=$dateChange; ?>" class="form-control">
         </div>
