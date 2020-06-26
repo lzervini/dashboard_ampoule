@@ -98,14 +98,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modification pour le changement d'ampoule</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
 
 </head>
 <body>
 
-
-    <form action='' method='POST' class="col-lg-3 offset-lg-3">
+<div class="container">
+    <form action='' method='POST' class="offset-lg-4 col-md-4 ">
         <div>
             Date du changement d'ampoule: <input type="date" name='date_changement' id='date_changement' placeholder="Date" value="<?=$dateChange; ?>" class="form-control">
         </div>
@@ -130,7 +131,7 @@
                     $button= "Ajouter";
                 }
             ?>
-                <button type="submit"><?=$button ?></button> 
+                <button type="submit" class="btn btn-outline-primary"><?=$button ?></button> 
         </div>  
             <?php
                 if (isset($_GET['id']) && isset($_GET['edit'])){
@@ -141,6 +142,7 @@
                 }
             ?>
     </form>
+ </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
