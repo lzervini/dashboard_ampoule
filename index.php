@@ -7,23 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard des ampoules à changer</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-    <h1> Ampoules à changer </h1>
+    <h1> Gestionnaire des ampoules à changer </h1>
     <div class="container">
-    <table>
+    <table class="table table-hover text-center">
+    <thead class="theadcolor">
         <tr>
-            <th>ID</th>
-            <th>Date du changement</th>
-            <th>Étages</th>
-            <th>Position</th>
-            <th>Puissance de l'ampoule</th>
-            <th>Marque de l'ampoule</th>
-            <th>Modifier</th>
-            <th>Supprimer</th>
+            <th scope="col">ID</th>
+            <th scope="col">Date du changement</th>
+            <th scope="col">Étages</th>
+            <th scope="col">Position</th>
+            <th scope="col">Puissance de l'ampoule</th>
+            <th scope="col">Marque de l'ampoule</th>
+            <th scope="col">Modifier</th>
+            <th scope="col">Supprimer</th>
         </tr>
+</thead>
         <div>
         <p><a href="modify.php">Ajouter</a></p>
     </div>
@@ -40,7 +43,7 @@
 
     foreach($result as $row){
         echo '<tr>';
-        echo '<td>'.$row['id'].'</td>';
+        echo '<th>'.$row['id'].'</th>';
         echo '<td>'.$intlDateFormatter->format(strtotime($row['date_changement'])). '</td>';
         echo '<td>'.$row['etage'].'</td>';
         echo '<td>'.$row['position'].'</td>';
@@ -63,6 +66,8 @@
     ?>
 
 
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>
