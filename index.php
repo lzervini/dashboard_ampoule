@@ -6,11 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard des ampoules à changer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
     <h1> Ampoules à changer </h1>
+    <div class="container">
     <table>
         <tr>
             <th>ID</th>
@@ -44,8 +46,8 @@
         echo '<td>'.$row['position'].'</td>';
         echo '<td>'.$row['puissance_ampoule'].'</td>';
         echo '<td>'.$row['marque_ampoule'].'</td>';
-        echo '<td><a href="modify.php?edit=1&id='.$row['id'].'">Modifier</a></td>';
-        echo '<td><a href="delete.php?id='.$row['id'].'">Supprimer</a></td>';
+        echo '<td><a href="modify.php?edit=1&id='.$row['id'].'"><img src="images/edit.png" alt="trash"></a></td>';
+        echo '<td><a href="delete.php?id='.$row['id'].'"><img src="images/trash.png" alt="trash"></a></td>';
 
     }
 
@@ -58,9 +60,6 @@
             echo'<p>Il n\'y a aucune donnée à afficher</p>';
         }
 
-       if(count($result)){
-           echo'<p>Modification effectuée</p>';
-       }
     ?>
 
 
