@@ -105,8 +105,8 @@
 </head>
 <body>
 
-<div class="container">
-    <form action='' method='POST' class="offset-lg-4 col-md-4 ">
+<div class="container border rounded-lg ">
+    <form action='' method='POST' class="offset-lg-4 col-md-4">
         <div>
             Date du changement d'ampoule: <input type="date" name='date_changement' id='date_changement' placeholder="Date" value="<?=$dateChange; ?>" class="form-control">
         </div>
