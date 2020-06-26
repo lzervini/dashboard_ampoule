@@ -1,22 +1,46 @@
 body{
     font-family: 'Lato', sans-serif;
     font-size: 16px;
+    margin: 3.125rem;
+    background-color: #eef5db;
+}
+
+
+
+h1{
+    text-align: center;
 }
 
 .btn-outline-primary{
+    background-color: #c7efcf;
     color: black;
-    border-color: #474046;
+    border-color: #c7efcf;
 }
 
 .btn-outline-primary:hover {
         color: black;
-        background-color: #e29578;
-        border-color: #e29578;
+        background-color: #eef5db;
+        border-color: #eef5db;
+        color: black;
 }
 
-.container{
-    background-color:#ffddd2 ;
+.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show > .btn-outline-primary.dropdown-toggle{
+    background-color: #eef5db;
+    border-color: #eef5db;
 }
+
+.btn-outline-primary.focus, .btn-outline-primary:focus{
+    box-shadow:none ;
+}
+
+.formcolor{
+background-color: #eef5db;
+}
+
+.p-3 {
+    padding: $spacer !important;
+  }
+
 /*
 table{
     border-spacing: 1; 
