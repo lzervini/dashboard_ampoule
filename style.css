@@ -1,0 +1,35 @@
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+.btn-outline-primary{
+    color: black;
+    border-color: #79c6ab;
+}
+
+.btn-outline-primary:hover {
+        color: black;
+        background-color: #79c6ab;
+        border-color: #79c6ab;
+}
+
+.container{
+    background-color:#8888ac ;
+}
+/*
+table{
+    border-spacing: 1; 
+    border-radius:6px;
+    max-width:800px; 
+    width:100%;
+    margin:0 auto;
+    position:relative;
+    text-align: center;
+}
+
+th{
+    background: rgb(230, 189, 189);
+    border-radius:6px;
+
+}
