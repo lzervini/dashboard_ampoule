@@ -106,7 +106,7 @@
 <body>
 
 <div class=" shadow bg-white rounded-lg offset-lg-4 col-lg-4 p-0 ">
-    <div >
+    <div class="title">
     <?php
                 if (isset($_GET['id']) && isset($_GET['edit'])){
                     $edadd= "Modifier les données";
@@ -115,13 +115,14 @@
                 }
             ?>
                 <h1 class="offset-lg-2 col-lg-8 p-3"><?=$edadd ?></h1> 
+            </div>
     <form action='' method='POST' class=" offset-lg-3 col-lg-6 p-3  ">
         
-        <div>
+    <div class="pb-3">
             Date du changement d'ampoule: <input type="date" name='date_changement' id='date_changement' placeholder="Date" value="<?=$dateChange; ?>" class="form-control ">
         </div>
         
-        <div>
+        <div class="pb-3">
             Numéro de l'étage :
             <select type="text" name='etage' id='etage' placeholder="Étage" value="<?=$etage; ?>" class="form-control">
                 <option value="RDC">RDC</option>
@@ -135,17 +136,17 @@
                 <option value="8">8</option>
             </select>
         </div>
-        <div>
+        <div class="pb-3">
             Position de l'ampoule : <input type="text" name='position' id='position' placeholder="Position" value="<?=$position; ?>" class="form-control">
         </div>
-        <div>
+        <div class="pb-3">
             Puissance de l'ampoule : <input type="text" name='puissance_ampoule' id='puissance_ampoule' placeholder="Puissance" value="<?=$puissance; ?>" class="form-control">
         </div>
-        <div>
+        <div class="pb-3">
             Marque de l'ampoule : <input type="text" name='marque_ampoule' id='marque_ampoule' placeholder="Marque" value="<?=$marque; ?>" class="form-control">
         </div>
         <br>
-        <div class="text-center">
+        <div class="text-center pb-3">
         <?php
                 if (isset($_GET['id']) && isset($_GET['edit'])){
                     $button= "Modifier";
