@@ -69,26 +69,15 @@ background-color: #eef5db;
   }
 
 
-.table{
+.table-responsive{
     background-color: #fff;
 }
 
 .theadcolor{
-background-color: #c7efcf;}
-
-/*
-table{
-    border-spacing: 1; 
-    border-radius:6px;
-    max-width:800px; 
-    width:100%;
-    margin:0 auto;
-    position:relative;
-    text-align: center;
+background-color: #c7efcf;
+width: 100%;
 }
 
-th{
-    background: rgb(230, 189, 189);
-    border-radius:6px;
-
+.table-responsive{
+    padding:0;
 }
