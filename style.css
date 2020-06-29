@@ -84,3 +84,7 @@ background-color: #c7efcf;
 width: 100%;
 }
 
+
+.table td, .table th{
+    vertical-align: middle;
+}
