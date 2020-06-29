@@ -84,6 +84,10 @@ a img{
     padding:0;
 }
 
+.table{
+    margin: 0;
+}
+
 .theadcolor{
     background-color: #c7efcf;
     width: 100%;
@@ -91,4 +95,5 @@ a img{
 
 .table td, .table th{
     vertical-align: middle;
+    margin-bottom: 0;
 }
