@@ -14,7 +14,8 @@
 </head>
 <body>
     <h1> Gestionnaire des ampoules à changer </h1>
-    <div class="container table-responsive ">
+<div class="container">
+    <div class="table-responsive ">
     <table class="table table-hover text-center col-lg-12 ">
     <thead class="theadcolor ">
         <tr>
@@ -52,17 +53,18 @@
     }
 ?>
     </table>
-</div>
-
+    
     <?php
     if (count($result)===0){
-            echo'<p>Il n\'y a aucune donnée à afficher</p>';
-        }
-
-    ?>
+        echo'<p>Il n\'y a aucune donnée à afficher</p>';
+    }
     
-        <a href="modify.php" class="px-3 pz-1 btn btn-outline-primary rounded-pill"><img src="images/add.png" alt="signe plus">Ajouter</a>
-
+    ?>
+</div>
+<div class="addbutton">
+<a href="modify.php" class="px-3 pz-1 btn btn-outline-primary rounded-pill"><img src="images/add.png" alt="signe plus">Ajouter</a>
+</div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
