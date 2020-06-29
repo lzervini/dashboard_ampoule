@@ -14,9 +14,9 @@
 </head>
 <body>
     <h1> Gestionnaire des ampoules à changer </h1>
-    <div class="container table-responsive">
-    <table class="table table-hover text-center col-lg-12">
-    <thead class="theadcolor">
+    <div class="container table-responsive ">
+    <table class="table table-hover text-center col-lg-12 ">
+    <thead class="theadcolor ">
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Date du changement</th>
