@@ -85,41 +85,37 @@
         $sth->execute();
 
         header('Location: index.php');
-
-
     }
 }
 
 ?>
 <!DOCTYPE html>
 <html lang="FR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modification pour le changement d'ampoule</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/ico" href="images/logo.ico" />
-
-
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modification pour le changement d'ampoule</title>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/ico" href="images/logo.ico" />
+    </head>
 <body>
 
 <div class=" shadow bg-white rounded-lg offset-lg-4 col-lg-4 p-0 ">
     <div class="title">
-    <?php
+        <?php
                 if (isset($_GET['id']) && isset($_GET['edit'])){
                     $edadd= "Modifier les données";
                 }else{
                     $edadd= "Ajouter un changement";
                 }
-            ?>
-                <h1 class="offset-lg-2 col-lg-8 p-3"><?=$edadd ?></h1> 
-            </div>
+        ?>
+        <h1 class="offset-lg-2 col-lg-8 p-3"><?=$edadd ?></h1> 
+    </div>
     <form action='' method='POST' class=" offset-lg-3 col-lg-6 p-3  ">
         
-    <div class="pb-3">
+        <div class="pb-3">
             Date du changement d'ampoule: <input type="date" name='date_changement' id='date_changement' value="<?=$dateChange; ?>" class="form-control ">
         </div>
         
@@ -148,25 +144,26 @@
         </div>
         <br>
         <div class="text-center pb-3">
-        <?php
+            <?php
                 if (isset($_GET['id']) && isset($_GET['edit'])){
                     $button= "Modifier";
                 }else{
                     $button= "Ajouter";
                 }
             ?>
-                <button type="submit" class="btn btn-outline-primary btn-lg btn-block center rounded-pill "><?=$button ?></button> 
+            <button type="submit" class="btn btn-outline-primary btn-lg btn-block center rounded-pill "><?=$button ?></button> 
         </div>  
             <?php
                 if (isset($_GET['id']) && isset($_GET['edit'])){
             ?>
-                    <input type="hidden" name="edit" value="1" />
-                    <input type="hidden" name="id" value="<?=$id ?>" />
+                <input type="hidden" name="edit" value="1" />
+                <input type="hidden" name="id" value="<?=$id ?>" />
             <?php
                 }
-                ?>
-                <div class="returnbutton">
-        <a href="index.php" class="px-3 pz-1 btn btn-outline-primary rounded-pill">Retour</a>
+            ?>
+                
+            <div class="returnbutton">
+                <a href="index.php" class="px-3 pz-1 btn btn-outline-primary rounded-pill ">Retour</a>
             </div>
     </form>
             </div>
