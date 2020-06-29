@@ -8,7 +8,6 @@ body{
 .container{
     padding:0;
     margin-top: 20px;
-    text-align: right;
 }
 
 
@@ -68,6 +67,15 @@ button img{
     padding-right: 10px;
 }
 
+.addbutton{
+    text-align: right;
+    margin-top: 20px;
+}
+
+.returnbutton{
+    text-align: center;
+}
+
 /* form */
 
 .formcolor{
@@ -88,3 +96,4 @@ button img{
 .table td, .table th{
     vertical-align: middle;
 }
+
