@@ -62,7 +62,7 @@
     ?>
 </div>
 <div class="addbutton">
-<a href="modify.php" class="px-3 pz-1 btn btn-outline-primary rounded-pill"><img src="images/add.png" alt="signe plus">Ajouter</a>
+<a href="modify.php" class="px-3 pz-1 btn btn-outline-primary rounded-pill" data-toggle="tooltip" data-placement="left" title="Ajouter"><img src="images/add.png" alt="signe plus"></img></a>
 </div>
 </div>
 
