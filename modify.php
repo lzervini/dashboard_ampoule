@@ -18,7 +18,7 @@
         $result = $sth->fetch(PDO::FETCH_ASSOC);
 
         if(gettype($result) === "boolean"){            
-            header('Location: index.php');
+            header('Location: accueil.php');
             exit;
         }
 
@@ -84,7 +84,7 @@
         }
         $sth->execute();
 
-        header('Location: index.php');
+        header('Location: accueil.php');
     }
 }
 
@@ -163,7 +163,7 @@
             ?>
                 
             <div class="returnbutton">
-                <a href="index.php" class="px-3 pz-1 btn btn-outline-primary rounded-pill ">Retour</a>
+                <a href="accueil.php" class="px-3 pz-1 btn btn-outline-primary rounded-pill ">Retour</a>
             </div>
     </form>
             </div>
