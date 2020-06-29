@@ -20,9 +20,14 @@ h1{
     margin:0;
 }
 
+.p-3 {
+    padding: $spacer !important;
+}
+
+/* button */
+
 .add{
     padding-left:0;
-
 }
 
 .btn-outline-primary{
@@ -65,15 +70,13 @@ button img{
     padding-right: 10px;
 }
 
+/* form */
+
 .formcolor{
 background-color: #eef5db;
 }
 
-.p-3 {
-    padding: $spacer !important;
-}
-
-
+/* table */
 .table-responsive{
     background-color: #fff;
     padding:0;
@@ -83,7 +86,6 @@ background-color: #eef5db;
 background-color: #c7efcf;
 width: 100%;
 }
-
 
 .table td, .table th{
     vertical-align: middle;
