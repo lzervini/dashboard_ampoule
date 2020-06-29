@@ -164,8 +164,10 @@
                     <input type="hidden" name="id" value="<?=$id ?>" />
             <?php
                 }
-            ?>
-                <a href="index.php" class="px-3 pz-1 btn btn-outline-primary rounded-pill">Retour</a>
+                ?>
+                <div class="returnbutton">
+        <a href="index.php" class="px-3 pz-1 btn btn-outline-primary rounded-pill">Retour</a>
+            </div>
     </form>
             </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
