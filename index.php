@@ -49,10 +49,7 @@
         echo '<td>'.$row['marque_ampoule'].'</td>';
         echo '<td><a href="modify.php?edit=1&id='.$row['id'].'"><img src="images/edit.png" alt="trash"></a></td>';
         echo '<td><a href="delete.php?id='.$row['id'].'"><img src="images/trash.png" alt="trash"></a></td>';
-
     }
-
-
 ?>
     </table>
 </div>
@@ -63,8 +60,9 @@
         }
 
     ?>
-    <div class="container ">
-    <a href="modify.php"><button type="submit" class="add btn btn-outline-primary rounded-pill offset-lg-10 col-lg-2 "><img src="images/add.png" alt="signe plus">Ajouter</img></button></a>
+    
+    <div class="container">
+        <a href="modify.php" class="px-3 pz-1 btn btn-outline-primary rounded-pill"><img src="images/add.png" alt="signe plus">Ajouter</a>
     </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
