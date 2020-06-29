@@ -100,6 +100,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/ico" href="images/logo.ico" />
 
 
 </head>
@@ -137,10 +138,10 @@
             </select>
         </div>
         <div class="pb-3">
-            Position de l'ampoule : <input type="text" name='position' id='position' placeholder="Position" value="<?=$position; ?>" class="form-control">
+            Position de l'ampoule : <input type="text" name='position' id='position' placeholder="droite, gauche, fond du couloir, ..." value="<?=$position; ?>" class="form-control">
         </div>
         <div class="pb-3">
-            Puissance de l'ampoule : <input type="text" name='puissance_ampoule' id='puissance_ampoule' placeholder="Puissance" value="<?=$puissance; ?>" class="form-control">
+            Puissance de l'ampoule : <input type="text" name='puissance_ampoule' id='puissance_ampoule' placeholder="40W, 60W, 75W, ..." value="<?=$puissance; ?>" class="form-control">
         </div>
         <div class="pb-3">
             Marque de l'ampoule : <input type="text" name='marque_ampoule' id='marque_ampoule' placeholder="Marque" value="<?=$marque; ?>" class="form-control">
