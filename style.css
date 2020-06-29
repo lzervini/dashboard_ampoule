@@ -34,10 +34,10 @@ h1{
 }
 
 .btn-outline-primary:hover {
-        color: black;
-        background-color: #8980f5;
-        border-color: #8980f5;
-        color: black;
+   color: black;
+   background-color: #8980f5;
+   border-color: #8980f5;
+   color: black;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-outline-primary.dropdown-toggle:focus{
@@ -53,18 +53,14 @@ h1{
     box-shadow:none ;
 }
 
-button a{
-    color: black;
-}
 
 .add a:hover{
     text-decoration: none;
     color: black;
 }
 
-button img{
+a img{
     vertical-align:middle;
-    padding-right: 10px;
 }
 
 .addbutton{
@@ -96,4 +92,3 @@ button img{
 .table td, .table th{
     vertical-align: middle;
 }
-
