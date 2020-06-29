@@ -14,8 +14,8 @@
 </head>
 <body>
     <h1> Gestionnaire des ampoules à changer </h1>
-<div class="container">
-    <div class="table-responsive ">
+<div class="container ">
+    <div class="table-responsive shadow bg-white rounded-lg">
     <table class="table table-hover text-center col-lg-12 ">
     <thead class="theadcolor ">
         <tr>
