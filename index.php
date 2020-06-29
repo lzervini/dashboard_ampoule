@@ -49,7 +49,7 @@
         echo '<td>'.$row['puissance_ampoule'].'</td>';
         echo '<td>'.$row['marque_ampoule'].'</td>';
         echo '<td><a href="modify.php?edit=1&id='.$row['id'].'"><img title="Modifier" src="images/edit.png" alt="trash"></a></td>';
-        echo '<td><a href="delete.php?id='.$row['id'].'"><img img title="Supprimer" src="images/trash.png" alt="trash"></a></td>';
+        echo '<td><a href="delete.php?id='.$row['id'].'"><img title="Supprimer" src="images/trash.png" alt="trash"></a></td>';
     }
 ?>
     </table>
