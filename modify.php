@@ -111,9 +111,9 @@
                     $edadd= "Ajouter un changement";
                 }
         ?>
-        <h1 class="offset-lg-2 col-lg-8 p-3"><?=$edadd ?></h1> 
+        <h1 class="p-3"><?=$edadd ?></h1> 
     </div>
-    <form action='' method='POST' class=" offset-lg-3 col-lg-6 p-3  ">
+    <form action='' method='POST' class="  ">
         
         <div class="pb-3">
             Date du changement d'ampoule: <input type="date" name='date_changement' id='date_changement' value="<?=$dateChange; ?>" class="form-control ">
