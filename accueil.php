@@ -19,7 +19,7 @@
     <table class="table table-hover text-center">
     <thead class="theadcolor">
         <tr>
-            <th scope="col"><span class ="d-inline d-sm-inline d-md-none d-lg-none">ID</span></th>
+            <th scope="col">ID</th>
             <th scope="col">Date du changement</th>
             <th scope="col">Étages</th>
             <th scope="col">Position</th>
@@ -61,7 +61,7 @@
     
     ?>
 </div>
-    <div class="addbutton">
+    <div class="container addbutton">
     <a href="modify.php" class="px-3 pz-1 btn btn-outline-primary rounded-pill" data-toggle="tooltip" data-placement="left" title="Ajouter"><img src="images/add.png" alt="signe plus"></img></a>
     </div>
 </div>
