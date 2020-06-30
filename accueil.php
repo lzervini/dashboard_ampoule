@@ -14,12 +14,12 @@
 </head>
 <body>
     <h1> Gestionnaire des ampoules à changer </h1>
-<div class="container mt-3 ">
-    <div class="table-responsive shadow bg-white rounded-lg">
-    <table class="table table-hover text-center ">
-    <thead class="theadcolor ">
+<div class="container-fluid mt-3 ">
+    <div class="container responsive-table-line shadow bg-white rounded-lg">
+    <table class="table table-hover text-center">
+    <thead class="theadcolor">
         <tr>
-            <th scope="col">ID</th>
+            <th scope="col"><span class ="d-inline d-sm-inline d-md-none d-lg-none">ID</span></th>
             <th scope="col">Date du changement</th>
             <th scope="col">Étages</th>
             <th scope="col">Position</th>
@@ -42,14 +42,14 @@
 
     foreach($result as $row){
         echo '<tr>';
-        echo '<th>'.$row['id'].'</th>';
-        echo '<td>'.$intlDateFormatter->format(strtotime($row['date_changement'])). '</td>';
-        echo '<td>'.$row['etage'].'</td>';
-        echo '<td>'.$row['position'].'</td>';
-        echo '<td>'.$row['puissance_ampoule'].'</td>';
-        echo '<td>'.$row['marque_ampoule'].'</td>';
-        echo '<td><a href="modify.php?edit=1&id='.$row['id'].'"><img title="Modifier" src="images/edit.png" alt="trash"></a></td>';
-        echo '<td><a href="delete.php?id='.$row['id'].'"><img title="Supprimer" src="images/trash.png" alt="trash"></a></td>';
+        echo '<td data-title="ID">'.$row['id'].'</td>';
+        echo '<td data-title="Date">'.$intlDateFormatter->format(strtotime($row['date_changement'])). '</td>';
+        echo '<td data-title="Etage">'.$row['etage'].'</td>';
+        echo '<td data-title="Position">'.$row['position'].'</td>';
+        echo '<td data-title="Puissance">'.$row['puissance_ampoule'].'</td>';
+        echo '<td data-title="Marque">'.$row['marque_ampoule'].'</td>';
+        echo '<td data-title="Modifier"><a href="modify.php?edit=1&id='.$row['id'].'"><img title="Modifier" src="images/edit.png" alt="trash"></a></td>';
+        echo '<td data-title="Supprimer"><a href="delete.php?id='.$row['id'].'"><img title="Supprimer" src="images/trash.png" alt="trash"></a></td>';
     }
 ?>
     </table>
@@ -61,9 +61,9 @@
     
     ?>
 </div>
-<div class="addbutton">
-<a href="modify.php" class="px-3 pz-1 btn btn-outline-primary rounded-pill" data-toggle="tooltip" data-placement="left" title="Ajouter"><img src="images/add.png" alt="signe plus"></img></a>
-</div>
+    <div class="addbutton">
+    <a href="modify.php" class="px-3 pz-1 btn btn-outline-primary rounded-pill" data-toggle="tooltip" data-placement="left" title="Ajouter"><img src="images/add.png" alt="signe plus"></img></a>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
