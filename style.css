@@ -120,7 +120,8 @@ a img{
 	position: relative;
 	padding-left: 50% !important; 
 	white-space: normal;
-	text-align:center; 
+    text-align:center; 
+    vertical-align: middle;
 	}
 	 
 	.responsive-table-line td:before { 
@@ -128,28 +129,29 @@ a img{
     top: 0px;
     left: 0px;
 	width: 45%; 
-	padding-right: 15px; 
 	height:100%;
 	overflow:hidden !important;
-    text-align:center;
-    vertical-align: center;
 	background-color:#c7efcf;
-    padding:2px;
     
     }
 
-    td[data-title=ID],
-    td[data-title=Date],
-    td[data-title=Etage],
-    td[data-title=Position],
-    td[data-title=Puissance],
-    td[data-title=Marque],
-    td[data-title=Modifier]{
-        border-bottom: 1px solid grey;
-        text-align: center;
-    }
+
     td[data-title=ID]{
-        border-top: 4px solid black ;
+        border-top: 0.5px solid black ;
         }
-	
-	}
+    
+
+
+    td[data-title=ID]::before,
+    td[data-title=Date]::before,
+    td[data-title=Etage]::before,
+    td[data-title=Position]::before,
+    td[data-title=Puissance]::before,
+    td[data-title=Marque]::before,
+    td[data-title=Modifier]::before,
+    td[data-title=Supprimer]::before{
+        vertical-align: middle;
+        text-align: center;
+        padding: 0.75rem;
+    }
+}
