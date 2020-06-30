@@ -1,5 +1,5 @@
-
 <?php 
+session_start();
 
     if(isset($_POST['submit'])){
         $username = $_POST['username'];
@@ -8,14 +8,22 @@
         require_once('database.php');
 
     $sql="SELECT * FROM user WHERE username='$username'";
-    $result = $db->prepare($sql);
+    $result = $dbh->prepare($sql);
     $result->execute();
 
     if($result->rowCount() > 0){
-
+        $data = $result->fetchAll();
+            if(password_verify($password, $data[0]["password"])){
+                echo "Connexion effectué";
+                $_SESSION['username'] = $username;
+                header('Location: accueil.php');
+            }
     }else{
         $password = password_hash($password, PASSWORD_DEFAULT);
-        $sql="INSERT INTO user (username, password) VALUES ('$username', '$password')"
+        $sql="INSERT INTO user (username, password) VALUES ('$username', '$password')";
+        $req = $dbh->prepare($sql);
+        $req->execute();
+        echo "Enregistrement effectué";
     }
 
     
