@@ -1,4 +1,8 @@
-<?php require_once('database.php'); ?>
+<?php
+session_start();
+require_once('database.php'); ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,21 +13,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/ico" href="images/logo.ico" />
+    <link rel="icon" type="image/ico" href="images/logo.ico">
 </head>
 <body>
-    <div id="container">
-            
-            <form action=".php" method="POST">
-                <h1>Connexion</h1>
-                
+    <?php 
+    if(isset($_SESSION['username'])){
+        echo "Vous etes connecté en tant que :" . $_SESSION['username'];
+    }else{
+        header('Location: accueil.php');
+
+    }
+    ?>
+    <div id="container-fluid">
+        <div class=" shadow bg-white rounded-lg offset-lg-4 col-lg-4 p-0 ">
+        <div class="title">
+            <h1>Connexion</h1>
+        </div>
+
+            <form action="login.php" method="POST" class="p-3">                
                 <label>Nom d'utilisateur</label>
-                <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+                <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" class="form-control" >
 
                 <label>Mot de passe</label>
-                <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+                <input type="password" placeholder="Entrer le mot de passe" name="password" class="form-control">
 
-                <input type="submit" id='submit' value='login' >
+                <input type="submit" value="Se connecter" name="submit" class="px-3 pz-1 m-2 btn btn-outline-primary rounded-pill">
 
             </form>
         </div>
