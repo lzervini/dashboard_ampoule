@@ -77,11 +77,7 @@ a img{
     background-color: #eef5db;
 }
 
-form{
-    padding-right: 100px;
-    padding-left: 100px;
 
-}
 
 /* table */
 .table-responsive{
@@ -102,3 +98,58 @@ form{
     vertical-align: middle;
     margin-bottom: 0;
 }
+
+@media (max-width: 500px) {
+	
+	.responsive-table-line td:before { content: attr(data-title); }
+	
+	.responsive-table-line table, 
+	.responsive-table-line thead, 
+	.responsive-table-line tbody, 
+	.responsive-table-line th, 
+	.responsive-table-line td, 
+	.responsive-table-line tr { 
+	display: block; 
+	}
+	 
+	.responsive-table-line thead tr { 
+    display:none;
+	}
+	
+	.responsive-table-line td { 
+	position: relative;
+	padding-left: 50% !important; 
+	white-space: normal;
+	text-align:center; 
+	}
+	 
+	.responsive-table-line td:before { 
+    position: absolute;
+    top: 0px;
+    left: 0px;
+	width: 45%; 
+	padding-right: 15px; 
+	height:100%;
+	overflow:hidden !important;
+    text-align:center;
+    vertical-align: center;
+	background-color:#c7efcf;
+    padding:2px;
+    
+    }
+
+    td[data-title=ID],
+    td[data-title=Date],
+    td[data-title=Etage],
+    td[data-title=Position],
+    td[data-title=Puissance],
+    td[data-title=Marque],
+    td[data-title=Modifier]{
+        border-bottom: 1px solid grey;
+        text-align: center;
+    }
+    td[data-title=ID]{
+        border-top: 4px solid black ;
+        }
+	
+	}
