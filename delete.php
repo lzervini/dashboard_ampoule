@@ -7,6 +7,6 @@
         $sth -> execute();
 
     }
-    header('Location: index.php');
+    header('Location: accueil.php');
 
 ?>
