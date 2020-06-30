@@ -101,8 +101,8 @@
         <link rel="icon" type="image/ico" href="images/logo.ico" />
     </head>
 <body>
-
-<div class=" shadow bg-white rounded-lg offset-lg-4 col-lg-4 p-0 ">
+<div class="container-fluid mt-3 ">
+    <div class="container responsive-table-line shadow bg-white rounded-lg offset-lg-4 col-lg-4 p-2">
     <div class="title">
         <?php
                 if (isset($_GET['id']) && isset($_GET['edit'])){
