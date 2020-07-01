@@ -16,14 +16,7 @@ require_once('database.php'); ?>
     <link rel="icon" type="image/ico" href="images/logo.ico">
 </head>
 <body>
-    <?php 
-    if(isset($_SESSION['username'])){
-        echo "Vous etes connecté en tant que :" . $_SESSION['username'];
-    }else{
-        header('Location: accueil.php');
-
-    }
-    ?>
+    
     <div id="container-fluid">
         <div class=" shadow bg-white rounded-lg offset-lg-4 col-lg-4 p-0 ">
         <div class="title">
