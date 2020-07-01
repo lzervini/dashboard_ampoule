@@ -72,13 +72,14 @@
 
 <!-- modal -->
 <div id="modal" class="hidden">
-    <div id="modal_dialog">
+    <div id="modal_dialog" class="rounded border">
+        <img src="images/icon_warning.png" alt="icon warning"></img>
         <h1>Êtes-vous sur ?</h1>
         <p class="modal_text"> Voulez vous vraiment supprimer cette ligne ? <br>
        Il vous sera impossible de la récupérer. </p>
         <div id="modal_area_btn">
-        <button id="modal_btn_no">Cancel</button>
-        <button id="modal_btn_yes" class="btn btn-warning">Supprimer</button>
+        <button id="modal_btn_no" class="btn btn-light" >Annuler</button>
+        <button id="modal_btn_yes" class="btn btn-danger">Supprimer</button>
       </div>
     </div>
 </div>
