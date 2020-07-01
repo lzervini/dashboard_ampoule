@@ -14,6 +14,7 @@
 </head>
 <body>
     <h1> Gestionnaire des ampoules à changer </h1>
+
 <div class="container-fluid mt-3 ">
     <div class="container responsive-table-line shadow bg-white rounded-lg">
     <table class="table table-hover text-center">
@@ -49,10 +50,12 @@
         echo '<td data-title="Puissance">'.$row['puissance_ampoule'].'</td>';
         echo '<td data-title="Marque">'.$row['marque_ampoule'].'</td>';
         echo '<td data-title="Modifier"><a href="modify.php?edit=1&id='.$row['id'].'"><img title="Modifier" src="images/edit.png" alt="trash"></a></td>';
-        echo '<td data-title="Supprimer"><a href="delete.php?id='.$row['id'].'"><img title="Supprimer" src="images/trash.png" alt="trash"></a></td>';
+        echo '<td data-title="Supprimer"><a href="delete.php?id='.$row['id'].'" class="btn_delete" ><img title="Supprimer" src="images/trash.png" alt="trash"></a></td>';
     }
 ?>
-    </table>
+
+
+
     
     <?php
     if (count($result)===0){
@@ -60,14 +63,32 @@
     }
     
     ?>
+</table>
 </div>
     <div class="container addbutton">
     <a href="modify.php" class="px-3 pz-1 btn btn-outline-primary rounded-pill" data-toggle="tooltip" data-placement="left" title="Ajouter"><img src="images/add.png" alt="signe plus"></img></a>
     </div>
 </div>
 
+<!-- modal -->
+<div id="modal" class="hidden">
+    <div id="modal_dialog">
+        <h1>Êtes-vous sur ?</h1>
+        <p class="modal_text"> Voulez vous vraiment supprimer cette ligne ? <br>
+       Il vous sera impossible de la récupérer. </p>
+        <div id="modal_area_btn">
+        <button id="modal_btn_no">Cancel</button>
+        <button id="modal_btn_yes" class="btn btn-warning">Supprimer</button>
+      </div>
+    </div>
+</div>
+
+
+
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="delete.js"> </script>
 </body>
 </html>
