@@ -30,7 +30,7 @@ require_once('database.php'); ?>
             <h1>Connexion</h1>
         </div>
 
-            <form action="login.php" method="POST" class="p-3">                
+            <form action="accueil.php" method="POST" class="p-3">                
                 <label>Nom d'utilisateur</label>
                 <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" class="form-control" >
 
