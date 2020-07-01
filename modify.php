@@ -102,7 +102,7 @@
     </head>
 <body>
 <div class="container-fluid mt-3 ">
-    <div class="container responsive-table-line shadow bg-white rounded-lg offset-lg-4 col-lg-4 p-2">
+    <div class="container responsive-table-line shadow bg-white rounded-lg offset-lg-4 col-lg-4 ">
     <div class="title">
         <?php
                 if (isset($_GET['id']) && isset($_GET['edit'])){
@@ -113,7 +113,7 @@
         ?>
         <h1 class="p-3"><?=$edadd ?></h1> 
     </div>
-    <form action='' method='POST' class="  ">
+    <form action='' method='POST' class=" p-4 ">
         
         <div class="pb-3">
             Date du changement d'ampoule: <input type="date" name='date_changement' id='date_changement' value="<?=$dateChange; ?>" class="form-control ">
