@@ -18,12 +18,6 @@ session_start();
                 $_SESSION['username'] = $username;
                 header('Location: accueil.php');
             }
-    }else{
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        $sql="INSERT INTO user (username, password) VALUES ('$username', '$password')";
-        $req = $dbh->prepare($sql);
-        $req->execute();
-        echo "Enregistrement effectué";
     }
 
     
