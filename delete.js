@@ -5,12 +5,11 @@
 const deleteLinks = document.getElementsByClassName('btn_delete');
 const btnNo = document.getElementById('modal_btn_no');
 const btnYes = document.getElementById('modal_btn_yes');
-console.log(btnNo);
 
 //Boucle qui va affecter l'élement clic à tous les liens ayant la class ="btn_delete"
 //Ou en résumé à tous les éléments qui sont dans notre sélection (collectionHTML) deleteLinks
 for (deleteLink of deleteLinks){
-    //Affecte l'évenement clic 
+    //Affecte l'évenement click 
     //Sur clic executera une fonction sans nom dite anonyme
     deleteLink.addEventListener('click', function(e){
         e.preventDefault();
@@ -18,6 +17,9 @@ for (deleteLink of deleteLinks){
     //Selectionne l'élement ayant l'id modal
     const modal = document.getElementById('modal');
     modal.classList.remove('hidden');
+
+    // Ajout de la classe ready-to-delete au lien que l'on vient de cliquer
+        this.classList.toggle('ready-to-delete');
     });
 }
 
@@ -25,4 +27,24 @@ for (deleteLink of deleteLinks){
 btnNo.addEventListener('click', function(){
     const modal = document.getElementById('modal');
     modal.classList.add('hidden');
+
+    //Sélection du lien ayant la classe ready-to-delete
+    const elementsToDelete = document.getElementsByClassName('ready-to-delete');
+    for (elementToDelete of elementsToDelete){
+        elementsToDelete.classList.toggle('ready-to-delete');
+    }
+
+});
+
+//Ajout de l'évènement click au bouton oui
+btnYes.addEventListener('click', function(){
+    console.log('coucou');
+
+    const modal = document.getElementById('modal');
+    modal.classList.add('hidden');    
+;
+    const elementsToDelete = document.getElementsByClassName('ready-to-delete');
+    for (elementToDelete of elementsToDelete){
+        location.href=elementToDelete.getAttribute('href');
+    }
 });
