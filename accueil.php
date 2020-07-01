@@ -73,7 +73,7 @@
 <!-- modal -->
 <div id="modal" class="hidden">
     <div id="modal_dialog" class="rounded border">
-        <img src="images/icon_warning.png" alt="icon warning"></img>
+        <img src="images/warning.png" alt="icon warning"></img>
         <h1>Êtes-vous sur ?</h1>
         <p class="modal_text"> Voulez vous vraiment supprimer cette ligne ? <br>
        Il vous sera impossible de la récupérer. </p>

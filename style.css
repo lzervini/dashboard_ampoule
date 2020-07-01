@@ -194,6 +194,10 @@ a img{
     text-align: center;
 }
 
+.btn-danger{
+    background-color: #fe5f55;
+    border-color: #fe5f55;
 
+}
 
 
