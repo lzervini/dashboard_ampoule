@@ -121,8 +121,9 @@
         </div>
         
         <div class="pb-3">
-                <label for="etage">Numéro de l'étage :</label>
-        <select name='etage' id='etage' class="form-control" required>
+            <label for="etage">Numéro de l'étage :</label>
+            <select name='etage' id='etage' class="form-control" required>
+                <option value="">Choisissez un étage</option>
                 <option value="RDC">RDC</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -136,7 +137,7 @@
         </div>
         <div class="pb-3">
             <label>Position de l'ampoule :</label>
-             <input type="text" name='position' id='position' placeholder="droite, gauche, fond du couloir, ..." value="<?=$position; ?>" class="form-control" required>
+            <input type="text" name='position' id='position' placeholder="droite, gauche, fond du couloir, ..." value="<?=$position; ?>" class="form-control" required>
         </div>
         <div class="pb-3">
             <label>Puissance de l'ampoule : </label>
