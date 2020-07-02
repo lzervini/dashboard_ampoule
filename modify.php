@@ -116,12 +116,12 @@
     <form action='' method='POST' class=" p-4 ">
         
         <div class="pb-3">
-            Date du changement d'ampoule: <input type="date" name='date_changement' id='date_changement' value="<?=$dateChange; ?>" class="form-control ">
+            Date du changement d'ampoule: <input type="date" name='date_changement' id='date_changement' value="<?=$dateChange; ?>" class="form-control " required>
         </div>
         
         <div class="pb-3">
             Numéro de l'étage :
-            <select name='etage' id='etage' class="form-control">
+            <select name='etage' id='etage' class="form-control" required>
                 <option value="RDC">RDC</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -134,13 +134,13 @@
             </select>
         </div>
         <div class="pb-3">
-            Position de l'ampoule : <input type="text" name='position' id='position' placeholder="droite, gauche, fond du couloir, ..." value="<?=$position; ?>" class="form-control">
+            Position de l'ampoule : <input type="text" name='position' id='position' placeholder="droite, gauche, fond du couloir, ..." value="<?=$position; ?>" class="form-control" required>
         </div>
         <div class="pb-3">
-            Puissance de l'ampoule : <input type="text" name='puissance_ampoule' id='puissance_ampoule' placeholder="40W, 60W, 75W, ..." value="<?=$puissance; ?>" class="form-control">
+            Puissance de l'ampoule : <input type="text" name='puissance_ampoule' id='puissance_ampoule' placeholder="40W, 60W, 75W, ..." value="<?=$puissance; ?>" class="form-control" required>
         </div>
         <div class="pb-3">
-            Marque de l'ampoule : <input type="text" name='marque_ampoule' id='marque_ampoule' placeholder="Marque" value="<?=$marque; ?>" class="form-control">
+            Marque de l'ampoule : <input type="text" name='marque_ampoule' id='marque_ampoule' placeholder="Marque" value="<?=$marque; ?>" class="form-control" required>
         </div>
         <br>
         <div class="text-center pb-3">
