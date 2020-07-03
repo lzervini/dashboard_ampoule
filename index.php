@@ -1,8 +1,6 @@
 <?php
-session_start();
-require_once('database.php'); ?>
-
-
+    require_once('database.php');
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,16 +21,17 @@ require_once('database.php'); ?>
             <h1>Connexion</h1>
         </div>
 
-            <form action="accueil.php" method="POST" class="p-3">                
+            <form action="login.php" method="POST" class="p-3">                
                 <label>Nom d'utilisateur</label>
                 <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" class="form-control" >
 
                 <label>Mot de passe</label>
                 <input type="password" placeholder="Entrer le mot de passe" name="password" class="form-control">
 
-                <input type="submit" value="Se connecter" name="submit" class="px-3 pz-1 m-2 btn btn-outline-primary rounded-pill">
+                <input type="submit" value="Connexion" name="submit" class="px-3 pz-1 m-2 btn btn-outline-primary rounded-pill">
 
             </form>
+            </div>
         </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
