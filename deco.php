@@ -1,7 +1,11 @@
 <?php
-session_start();
 
+<?php
+session_start();
+unset($_SESSION);
 session_destroy();
-header('Location: login.php');
-exit;
+session_write_close();
+header('Location: index.php');
+die;
+
 ?>
