@@ -19,15 +19,25 @@ if(empty($_SESSION['username'])){
 
 </head>
 <body>
+    <div class="container-fluid navbar">
+        <div class="container d-flex lign-items-center">
+            <div>
+                <?php 
+                echo '<p class="echo">Bonjour ' .$_SESSION['username']. ' ! </p>'
+                ?>
+            </div>
+            <div>
+                <a href="deco.php"> <img src="images/exit.svg"></img></a>
+</div>
+</div>
+</div>
+<main>
+
     <h1> Gestionnaire des ampoules à changer </h1>
 
 <div class="container-fluid mt-3 ">
     <div class="container">
-    <div class="userecho">
-    <?php 
-    echo '<img src="images/icon_user.svg" alt="icon user"></img> Bonjour ' .$_SESSION['username']. ' !'
-     ?>
-     </div>
+
     <div class=" responsive-table-line shadow bg-white rounded-lg">
     <table class="table table-hover text-center">
     <thead class="theadcolor">
@@ -96,7 +106,7 @@ if(empty($_SESSION['username'])){
       </div>
     </div>
 </div>
-
+</main>
 
 
 

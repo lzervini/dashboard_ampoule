@@ -2,11 +2,12 @@ body{
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     background-color: #eef5db;
-    margin: 20px;
+   
 }
 
 .container{
     padding:0;
+    margin: auto;
 }
 
 
@@ -199,9 +200,24 @@ a img{
 
 }
 
-/* login */
-.userecho img {
-    vertical-align: bottom;
+.main{
+    margin: auto;
+}
+
+.echo {
+margin:0;
+}
+
+nav img{
+    margin-right: 10px;
 }
 
 
+.navbar{
+    margin: 0;
+    background-color: #c7efcf;
+}
+
+main{
+    margin-top: 25px;
+}
