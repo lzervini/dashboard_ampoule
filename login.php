@@ -1,27 +1,30 @@
-<?php 
-session_start();
+<?php
+    require_once('database.php');
 
-    if(isset($_POST['submit'])){
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+    $user = '';
+    $password = '';
 
-        require_once('database.php');
+    if(isset($_POST['Connexion']) && !empty($_POST['username']) && !empty($_POST['password'])){   
+        $sql='SELECT user.username, user.password FROM user WHERE user.username=:login';
+        $sth = $dbh->prepare($sql);
+        $sth->bindValue(':login', $_POST['username'], PDO::PARAM_STR);
+        $sth->execute();
+        $data = $sth->fetch();
+        var_dump($data);
+    $user = $data['username'];
+    $password = $data['password'];
 
-    $sql="SELECT * FROM user WHERE username='$username'";
-    $result = $dbh->prepare($sql);
-    $result->execute();
-
-    if($result->rowCount() > 0){
-        $data = $result->fetchAll();
-            if(password_verify($password, $data[0]["password"])){
-                echo "Connexion effectué";
-                $_SESSION['username'] = $username;
-                header('Location: accueil.php');
-            }
-    }
-
+    session_start();
     
+        if($_POST['username'] == $user && $_POST['password'] == $password){
+            $_SESSION['username'] = $user;
+            header('Location: accueil.php');
+
+        }else{
+            echo'<p>Mauvais indentifiant ou mot de passe!</p>';
+        }
     }
+
 ?>
 
 <!DOCTYPE html>
