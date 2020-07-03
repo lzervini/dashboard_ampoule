@@ -78,7 +78,6 @@ a img{
 }
 
 
-
 /* table */
 .table-responsive{
     background-color: #fff;
@@ -198,6 +197,11 @@ a img{
     background-color: #fe5f55;
     border-color: #fe5f55;
 
+}
+
+/* login */
+.userecho img {
+    vertical-align: bottom;
 }
 
 
