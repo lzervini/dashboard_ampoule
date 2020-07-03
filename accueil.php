@@ -1,4 +1,10 @@
-<?php require_once('database.php'); ?>
+<?php require_once('database.php'); 
+
+session_start();
+if(empty($_SESSION['user'])){
+        header('Location: login.php');
+    }   
+    ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -73,7 +79,7 @@
 <!-- modal -->
 <div id="modal" class="hidden">
     <div id="modal_dialog" class="rounded border">
-        <img src="images/TEST.svg" alt="icon warning"></img>
+        <img src="images/warning.svg" alt="icon warning"></img>
         <h1>Êtes-vous sur ?</h1>
         <p class="modal_text"> Voulez vous vraiment supprimer cette ligne ? <br>
        Il vous sera impossible de la récupérer. </p>
