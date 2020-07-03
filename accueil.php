@@ -1,8 +1,8 @@
 <?php require_once('database.php'); 
 
 session_start();
-if(empty($_SESSION['user'])){
-        header('Location: login.php');
+if(empty($_SESSION['username'])){
+        header('Location: index.php');
     }   
     ?>
 
@@ -22,7 +22,13 @@ if(empty($_SESSION['user'])){
     <h1> Gestionnaire des ampoules à changer </h1>
 
 <div class="container-fluid mt-3 ">
-    <div class="container responsive-table-line shadow bg-white rounded-lg">
+    <div class="container">
+    <div class="userecho">
+    <?php 
+    echo '<img src="images/icon_user.svg" alt="icon user"></img> Bonjour ' .$_SESSION['username']. ' !'
+     ?>
+     </div>
+    <div class=" responsive-table-line shadow bg-white rounded-lg">
     <table class="table table-hover text-center">
     <thead class="theadcolor">
         <tr>
@@ -36,6 +42,7 @@ if(empty($_SESSION['user'])){
             <th scope="col">Supprimer</th>
         </tr>
 </thead>
+</div>
 
     <?php
 
