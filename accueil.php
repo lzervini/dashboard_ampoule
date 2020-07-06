@@ -14,6 +14,7 @@ if(empty($_SESSION['username'])){
     <title>Dashboard </title>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/ico" href="images/logo.ico" />
 
@@ -37,10 +38,6 @@ if(empty($_SESSION['username'])){
 
     <div class="container-fluid mt-3 ">
         <div class="container">
-            <form class="form-inline my-2 my-lg-0" method="search.php">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
 
     <div class=" responsive-table-line shadow bg-white rounded-lg">
     <table class="table table-hover text-center">
