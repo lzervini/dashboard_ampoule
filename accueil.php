@@ -35,8 +35,12 @@ if(empty($_SESSION['username'])){
 
     <h1> Gestionnaire des ampoules à changer </h1>
 
-<div class="container-fluid mt-3 ">
-    <div class="container">
+    <div class="container-fluid mt-3 ">
+        <div class="container">
+            <form class="form-inline my-2 my-lg-0" method="search.php">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
 
     <div class=" responsive-table-line shadow bg-white rounded-lg">
     <table class="table table-hover text-center">
