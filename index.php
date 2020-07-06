@@ -17,7 +17,7 @@
     <link rel="icon" type="image/ico" href="images/logo.ico">
 </head>
 <body>
-    <div id="container-fluid mt-3">
+    <div id="login container-fluid">
         <div class="container shadow bg-white rounded-lg offset-lg-4 col-lg-3 p-0 ">
         <div class="title">
             <h1>Connexion</h1>
