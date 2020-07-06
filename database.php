@@ -1,7 +1,7 @@
 <?php
-define('DATABASE', 'dashboard_ampoule');
-define('USER', 'root');
-define('PWD' , '');
+define('DATABASE', 'leaz_ampoule');
+define('USER', 'leaz');
+define('PWD' , 'oEPq/K1H9B21gQ==');
 define('HOST', 'localhost');
 
 try {
