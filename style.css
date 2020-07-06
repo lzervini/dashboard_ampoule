@@ -27,6 +27,10 @@ h1{
 
 /* button */
 
+#btnplus{
+    padding-top: 9px;
+}
+
 .btn-outline-primary{
     background-color: #c7efcf;
     color: black;
