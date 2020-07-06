@@ -14,7 +14,8 @@
     <link rel="icon" type="image/ico" href="images/logo.ico">
 </head>
 <body>
-    <div id="container-fluid style="margin-top: 50px;"">
+    <div class="mt-5">
+    <div id="container-fluid ">
         <div class="container shadow bg-white rounded-lg offset-lg-4 col-lg-3 p-0 ">
         <div class="title">
             <h1>Connexion</h1>
@@ -32,6 +33,7 @@
             </form>
             </div>
         </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
