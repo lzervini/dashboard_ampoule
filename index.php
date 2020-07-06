@@ -1,8 +1,5 @@
 <?php
     require_once('database.php');
-
-
-
     ?>
 
 <!DOCTYPE html>
@@ -17,7 +14,7 @@
     <link rel="icon" type="image/ico" href="images/logo.ico">
 </head>
 <body>
-    <div id="login container-fluid">
+    <div id="container-fluid style="margin-top: 50px;"">
         <div class="container shadow bg-white rounded-lg offset-lg-4 col-lg-3 p-0 ">
         <div class="title">
             <h1>Connexion</h1>
