@@ -89,7 +89,7 @@ if(empty($_SESSION['username'])){
 </table>
 </div>
     <div class="container addbutton">
-    <a href="modify.php" class="px-3 pz-1 btn btn-outline-primary rounded-pill" data-toggle="tooltip" data-placement="left" title="Ajouter"><img src="images/add.png" alt="signe plus"></img></a>
+    <a href="modify.php" id="btnplus" class="px-3 pz-1 btn btn-outline-primary rounded-pill" data-toggle="tooltip" data-placement="left" title="Ajouter"><img src="images/add.png" alt="signe plus"></img></a>
     </div>
 </div>
 
