@@ -1,7 +1,7 @@
 <?php
-define('DATABASE', 'leaz_ampoule');
-define('USER', 'leaz');
-define('PWD' , 'oEPq/K1H9B21gQ==');
+define('DATABASE', 'db_name');
+define('USER', 'root');
+define('PWD' , '');
 define('HOST', 'localhost');
 
 try {
