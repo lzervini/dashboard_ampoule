@@ -1,5 +1,5 @@
 <?php
-define('DATABASE', 'db_name');
+define('DATABASE', 'dashboard_ampoule');
 define('USER', 'root');
 define('PWD' , '');
 define('HOST', 'localhost');
