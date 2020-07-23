@@ -16,6 +16,8 @@ if(empty($_SESSION['username'])){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/ico" href="images/logo.ico" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+
 
 </head>
 <body>
@@ -72,8 +74,8 @@ if(empty($_SESSION['username'])){
         echo '<td data-title="Position">'.$row['position'].'</td>';
         echo '<td data-title="Puissance">'.$row['puissance_ampoule'].'</td>';
         echo '<td data-title="Marque">'.$row['marque_ampoule'].'</td>';
-        echo '<td data-title="Modifier"><a href="modify.php?edit=1&id='.$row['id'].'"><img title="Modifier" src="images/edit.png" alt="trash"></a></td>';
-        echo '<td data-title="Supprimer"><a href="delete.php?id='.$row['id'].'" class="btn_delete" ><img title="Supprimer" src="images/trash.png" alt="trash"></a></td>';
+        echo '<td data-title="Modifier"><a href="modify.php?edit=1&id='.$row['id'].'"><i class="far fa-edit fa-2x" style="color:black;"></i></a></td>';
+        echo '<td data-title="Supprimer"><a href="delete.php?id='.$row['id'].'" class="btn_delete" ><i class="far fa-trash-alt fa-2x" style="color:#fe5f55;"></i></a></td>';
     }
 ?>
 
@@ -89,7 +91,7 @@ if(empty($_SESSION['username'])){
 </table>
 </div>
     <div class="container addbutton">
-    <a href="modify.php" id="btnplus" class="px-3 pz-1 btn btn-outline-primary rounded-pill" data-toggle="tooltip" data-placement="left" title="Ajouter"><img src="images/add.png" alt="signe plus"></img></a>
+    <a href="modify.php" id="btnplus"  data-toggle="tooltip" data-placement="left" title="Ajouter"><i class="far fa-plus-square fa-3x" style="color:black;"></i></a>
     </div>
 </div>
 
