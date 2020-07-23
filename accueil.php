@@ -74,8 +74,8 @@ if(empty($_SESSION['username'])){
         echo '<td data-title="Position">'.$row['position'].'</td>';
         echo '<td data-title="Puissance">'.$row['puissance_ampoule'].'</td>';
         echo '<td data-title="Marque">'.$row['marque_ampoule'].'</td>';
-        echo '<td data-title="Modifier"><a href="modify.php?edit=1&id='.$row['id'].'"><i class="far fa-edit fa-2x" style="color:black;"></i></a></td>';
-        echo '<td data-title="Supprimer"><a href="delete.php?id='.$row['id'].'" class="btn_delete" ><i class="far fa-trash-alt fa-2x" style="color:#fe5f55;"></i></a></td>';
+        echo '<td title="Modifier"><a href="modify.php?edit=1&id='.$row['id'].'"><i class="far fa-edit fa-2x" style="color:black;"></i></a></td>';
+        echo '<td title="Supprimer"><a href="delete.php?id='.$row['id'].'" class="btn_delete" ><i class="far fa-trash-alt fa-2x" style="color:#fe5f55;"></i></a></td>';
     }
 ?>
 

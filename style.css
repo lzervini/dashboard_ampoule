@@ -233,3 +233,7 @@ main{
 #login{
     margin-top: 50px;
 }
+
+.fa-plus-square:hover{
+    color: #8980f5!important;
+}
