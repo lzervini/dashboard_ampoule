@@ -38,7 +38,6 @@ btnNo.addEventListener('click', function(){
 
 //Ajout de l'évènement click au bouton oui
 btnYes.addEventListener('click', function(){
-    console.log('coucou');
 
     const modal = document.getElementById('modal');
     modal.classList.add('hidden');    
