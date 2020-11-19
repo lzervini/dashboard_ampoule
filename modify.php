@@ -1,6 +1,12 @@
+
+
 <?php
     require_once('database.php');
-        
+    
+session_start();
+if(empty($_SESSION['username'])){
+        header('Location: index.php');
+    }   
 
     $id= '';
     $dateChange= '';
@@ -98,13 +104,33 @@
         <title>Modification pour le changement d'ampoule</title>
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/ico" href="images/logo.ico" />
     </head>
 <body>
+<div class="container-fluid navbar">
+        <div class="container d-flex lign-items-center">
+        <div class="returnbutton">
+                <a href="accueil.php" title="Retour à l'accueil">
+                    <i class="fas fa-home fa-2x" style="color:black;"></i>
+                </a>
+    </div>
+            <div>
+                <?php 
+                echo '<p class="echo">Bonjour ' .$_SESSION['username']. ' ! </p>'
+                ?>
+            </div>
+            <div>
+                <a href="deco.php" title="Se déconnecter"> <i class="fas fa-sign-out-alt fa-2x" style="color:black;"></i></a>
+            </div>
+        </div>
+    </div>
 <div class="container-fluid mt-3 ">
-    <div class="container responsive-table-line shadow bg-white rounded-lg offset-lg-4 col-lg-4 ">
+    <main>
+    <div class="container responsive-table-line shadow bg-white rounded-lg offset-lg-4 col-lg-4 my-3">
     <div class="title">
+
         <?php
                 if (isset($_GET['id']) && isset($_GET['edit'])){
                     $edadd= "Modifier les données";
@@ -124,16 +150,17 @@
         <div class="pb-3">
             <label for="etage">Numéro de l'étage :</label>
             <select name='etage' id='etage' class="form-control" required>
-                <option value="">Choisissez un étage</option>
-                <option value="RDC">RDC</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
+            <option <?php if ($etage =='1'){echo "selected";}?>>1</option>
+                    <option <?php if ($etage =='3'){echo "selected";}?> >3</option>
+                    <option <?php if ($etage =='2'){echo "selected";}?> >2</option>
+                    <option <?php if ($etage =='4'){echo "selected";}?> >4</option>
+                    <option <?php if ($etage =='5'){echo "selected";}?> >5</option>
+                    <option <?php if ($etage =='6'){echo "selected";}?> >6</option>
+                    <option <?php if ($etage =='7'){echo "selected";}?> >7</option>
+                    <option <?php if ($etage =='8'){echo "selected";}?> >8</option>
+                    <option <?php if ($etage =='9'){echo "selected";}?> >9</option>
+                    <option <?php if ($etage =='10'){echo "selected";}?> >10</option>
+                    <option <?php if ($etage =='11'){echo "selected";}?> >11</option>
             </select>
         </div>
         <div class="pb-3">
@@ -168,11 +195,9 @@
                 }
             ?>
                 
-            <div class="returnbutton">
-                <a href="accueil.php" class="px-3 pz-1 btn btn-outline-primary rounded-pill ">Retour</a>
-            </div>
     </form>
             </div>
+</main>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
