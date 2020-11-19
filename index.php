@@ -23,13 +23,13 @@
 
             <form action="login.php" method="post" class=" p-3">                
                 <label>Nom d'utilisateur</label>
-                <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" class="form-control" required>
+                <input type="text" placeholder="login" name="username" class="form-control" required>
 
                 <label>Mot de passe</label>
-                <input type="password" placeholder="Entrer le mot de passe" name="password" class="form-control" required>
-
-                <input type="submit" value="Connexion" name="submit" class="px-3 pz-1 m-2 btn btn-outline-primary rounded-pill">
-
+                <input type="password" placeholder="password" name="password" class="form-control" required>
+                <div class="d-flex justify-content-center">
+                <input type="submit" value="Se connecter" name="submit" class="px-3 pz-1 m-2 btn btn-outline-primary rounded-pill">
+                </div>
             </form>
             </div>
         </div>
