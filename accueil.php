@@ -29,10 +29,10 @@ if(empty($_SESSION['username'])){
                 ?>
             </div>
             <div>
-                <a href="deco.php"> <img src="images/exit.svg"></img></a>
-</div>
-</div>
-</div>
+                <a href="deco.php" title="Se déconnecter"> <i class="fas fa-sign-out-alt fa-2x" style="color:black;"></i></a>
+            </div>
+        </div>
+    </div>
 <main>
 
     <h1> Gestionnaire des ampoules à changer </h1>
