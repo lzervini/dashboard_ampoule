@@ -1,6 +1,33 @@
 <?php
     require_once('database.php');
-    ?>
+    
+    $user = '';
+    $password = '';
+    if(isset($_POST['submit']) && !empty($_POST['username']) && !empty($_POST['password'])){   
+        $username=$_POST['username'];
+        $sql='SELECT user.username, user.password FROM user WHERE user.username=:login';
+        $sth = $dbh->prepare($sql);
+        $sth->bindValue(':login', $username, PDO::PARAM_STR);
+        $sth->execute();
+        $data = $sth->fetch();
+//Récupère les infos de l'utilisateur
+        if (isset($data['username'])) {
+            $user = $data['username'];
+            $password = $data['password'];
+//On vérifie que l'username & le password correspondent 
+            if ($username == $user && $_POST['password'] == $password) {
+// Si oui, on démarre une session
+                session_start();
+                $_SESSION['username'] = $user;
+                header('Location: accueil.php');
+            }
+//Sinon on renvoie sur une page d'erreur
+        }else{
+            header('Location: error.php');
+        }
+    }
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +48,7 @@
             <h1>Connexion</h1>
         </div>
 
-            <form action="login.php" method="post" class=" p-3">                
+            <form action="index.php" method="post" class=" p-3">                
                 <label>Nom d'utilisateur</label>
                 <input type="text" placeholder="login" name="username" class="form-control" required>
 
