@@ -1,5 +1,3 @@
-
-
 <?php
     require_once('database.php');
     
@@ -108,98 +106,95 @@ if(empty($_SESSION['username'])){
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/ico" href="images/logo.ico" />
     </head>
-<body>
-<div class="container-fluid navbar">
-        <div class="container d-flex lign-items-center">
-        <div class="returnbutton">
-                <a href="accueil.php" title="Retour à l'accueil">
-                    <i class="fas fa-home fa-2x" style="color:black;"></i>
-                </a>
-    </div>
-            <div>
-                <?php 
-                echo '<p class="echo">Bonjour ' .$_SESSION['username']. ' ! </p>'
-                ?>
+    <body>
+        <div class="container-fluid navbar">
+                <div class="container d-flex lign-items-center">
+                <div class="returnbutton">
+                        <a href="accueil.php" title="Retour à l'accueil">
+                            <i class="fas fa-home fa-2x" style="color:black;"></i>
+                        </a>
             </div>
-            <div>
-                <a href="deco.php" title="Se déconnecter"> <i class="fas fa-sign-out-alt fa-2x" style="color:black;"></i></a>
+                    <div>
+                        <?php 
+                        echo '<p class="echo">Bonjour ' .$_SESSION['username']. ' ! </p>'
+                        ?>
+                    </div>
+                    <div>
+                        <a href="deco.php" title="Se déconnecter"> <i class="fas fa-sign-out-alt fa-2x" style="color:black;"></i></a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-<div class="container-fluid mt-3 ">
-    <main>
-    <div class="container responsive-table-line shadow bg-white rounded-lg offset-lg-4 col-lg-4 my-3">
-    <div class="title">
+        <div class="container-fluid mt-3 ">
+            <main>
+            <div class="container responsive-table-line shadow bg-white rounded-lg offset-lg-4 col-lg-4 my-3">
+            <div class="title">
 
-        <?php
-                if (isset($_GET['id']) && isset($_GET['edit'])){
-                    $edadd= "Modifier les données";
-                }else{
-                    $edadd= "Ajouter un changement";
-                }
-        ?>
-        <h1 class="p-3"><?=$edadd ?></h1> 
-    </div>
-    <form action='' method='POST' class=" p-4 ">
-        
-        <div class="pb-3">
-           <label> Date du changement d'ampoule : </label>
-            <input type="date" name='date_changement' id='date_changement' value="<?=$dateChange; ?>" class="form-control " required>
-        </div>
-        
-        <div class="pb-3">
-            <label for="etage">Numéro de l'étage :</label>
-            <select name='etage' id='etage' class="form-control" required>
-            <option <?php if ($etage =='1'){echo "selected";}?>>1</option>
-                    <option <?php if ($etage =='3'){echo "selected";}?> >3</option>
-                    <option <?php if ($etage =='2'){echo "selected";}?> >2</option>
-                    <option <?php if ($etage =='4'){echo "selected";}?> >4</option>
-                    <option <?php if ($etage =='5'){echo "selected";}?> >5</option>
-                    <option <?php if ($etage =='6'){echo "selected";}?> >6</option>
-                    <option <?php if ($etage =='7'){echo "selected";}?> >7</option>
-                    <option <?php if ($etage =='8'){echo "selected";}?> >8</option>
-                    <option <?php if ($etage =='9'){echo "selected";}?> >9</option>
-                    <option <?php if ($etage =='10'){echo "selected";}?> >10</option>
-                    <option <?php if ($etage =='11'){echo "selected";}?> >11</option>
-            </select>
-        </div>
-        <div class="pb-3">
-            <label>Position de l'ampoule :</label>
-            <input type="text" name='position' id='position' placeholder="droite, gauche, fond du couloir, ..." value="<?=$position; ?>" class="form-control" required>
-        </div>
-        <div class="pb-3">
-            <label>Puissance de l'ampoule : </label>
-            <input type="text" name='puissance_ampoule' id='puissance_ampoule' placeholder="40W, 60W, 75W, ..." value="<?=$puissance; ?>" class="form-control" required>
-        </div>
-        <div class="pb-3">
-            <label>Marque de l'ampoule : </label>
-            <input type="text" name='marque_ampoule' id='marque_ampoule' placeholder="Marque" value="<?=$marque; ?>" class="form-control" required>
-        </div>
-        <br>
-        <div class="text-center pb-3">
-            <?php
-                if (isset($_GET['id']) && isset($_GET['edit'])){
-                    $button= "Modifier";
-                }else{
-                    $button= "Ajouter";
-                }
-            ?>
-            <button type="submit" class="btn btn-outline-primary btn-lg btn-block center rounded-pill "><?=$button ?></button> 
-        </div>  
-            <?php
-                if (isset($_GET['id']) && isset($_GET['edit'])){
-            ?>
-                <input type="hidden" name="edit" value="1" />
-                <input type="hidden" name="id" value="<?=$id ?>" />
-            <?php
-                }
-            ?>
-                
-    </form>
+                <?php
+                        if (isset($_GET['id']) && isset($_GET['edit'])){
+                            $edadd= "Modifier les données";
+                        }else{
+                            $edadd= "Ajouter un changement";
+                        }
+                ?>
+                <h1 class="p-3"><?=$edadd ?></h1> 
             </div>
-</main>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-</body>
+            <form action='' method='POST' class=" p-4 ">
+                <div class="pb-3">
+                <label> Date du changement d'ampoule : </label>
+                    <input type="date" name='date_changement' id='date_changement' value="<?=$dateChange; ?>" class="form-control " required>
+                </div>
+                <div class="pb-3">
+                    <label for="etage">Numéro de l'étage :</label>
+                    <select name='etage' id='etage' class="form-control" required>
+                    <option <?php if ($etage =='1'){echo "selected";}?>>1</option>
+                            <option <?php if ($etage =='2'){echo "selected";}?> >2</option>
+                            <option <?php if ($etage =='3'){echo "selected";}?> >3</option>
+                            <option <?php if ($etage =='4'){echo "selected";}?> >4</option>
+                            <option <?php if ($etage =='5'){echo "selected";}?> >5</option>
+                            <option <?php if ($etage =='6'){echo "selected";}?> >6</option>
+                            <option <?php if ($etage =='7'){echo "selected";}?> >7</option>
+                            <option <?php if ($etage =='8'){echo "selected";}?> >8</option>
+                            <option <?php if ($etage =='9'){echo "selected";}?> >9</option>
+                            <option <?php if ($etage =='10'){echo "selected";}?> >10</option>
+                            <option <?php if ($etage =='11'){echo "selected";}?> >11</option>
+                    </select>
+                </div>
+                <div class="pb-3">
+                    <label>Position de l'ampoule :</label>
+                    <input type="text" name='position' id='position' placeholder="droite, gauche, fond du couloir, ..." value="<?=$position; ?>" class="form-control" required>
+                </div>
+                <div class="pb-3">
+                    <label>Puissance de l'ampoule : </label>
+                    <input type="text" name='puissance_ampoule' id='puissance_ampoule' placeholder="40W, 60W, 75W, ..." value="<?=$puissance; ?>" class="form-control" required>
+                </div>
+                <div class="pb-3">
+                    <label>Marque de l'ampoule : </label>
+                    <input type="text" name='marque_ampoule' id='marque_ampoule' placeholder="Marque" value="<?=$marque; ?>" class="form-control" required>
+                </div>
+                <br>
+                <div class="text-center pb-3">
+                    <?php
+                        if (isset($_GET['id']) && isset($_GET['edit'])){
+                            $button= "Modifier";
+                        }else{
+                            $button= "Ajouter";
+                        }
+                    ?>
+                    <button type="submit" class="btn btn-outline-primary btn-lg btn-block center rounded-pill "><?=$button ?></button> 
+                </div>  
+                    <?php
+                        if (isset($_GET['id']) && isset($_GET['edit'])){
+                    ?>
+                        <input type="hidden" name="edit" value="1" />
+                        <input type="hidden" name="id" value="<?=$id ?>" />
+                    <?php
+                        }
+                    ?> 
+            </form>
+        </div>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </body>
 </html>
