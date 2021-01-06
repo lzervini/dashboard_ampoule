@@ -61,33 +61,27 @@ if(empty($_SESSION['username'])){
     $sql= 'SELECT id, date_changement , etage, position, puissance_ampoule, marque_ampoule FROM ampoule';
     $sth= $dbh->prepare($sql);
     $sth->execute();
-    $result= $sth->fetchAll(PDO::FETCH_ASSOC);
+    $results= $sth->fetchAll(PDO::FETCH_ASSOC);
 
     $intlDateFormatter = new IntlDateFormatter('fr_FR', IntlDateFormatter::SHORT, IntlDateFormatter::NONE);
 
-
-    foreach($result as $row){
+    foreach($results as $result){
         echo '<tr>';
-        echo '<td data-title="ID">'.$row['id'].'</td>';
-        echo '<td data-title="Date">'.$intlDateFormatter->format(strtotime($row['date_changement'])). '</td>';
-        echo '<td data-title="Etage">'.$row['etage'].'</td>';
-        echo '<td data-title="Position">'.$row['position'].'</td>';
-        echo '<td data-title="Puissance">'.$row['puissance_ampoule'].'</td>';
-        echo '<td data-title="Marque">'.$row['marque_ampoule'].'</td>';
-        echo '<td title="Modifier"><a href="modify.php?edit=1&id='.$row['id'].'"><i class="far fa-edit fa-2x" style="color:black;"></i></a></td>';
-        echo '<td title="Supprimer"><a href="delete.php?id='.$row['id'].'" class="btn_delete" ><i class="far fa-trash-alt fa-2x" style="color:#fe5f55;"></i></a></td>';
+        echo '<td data-title="ID">'.$result['id'].'</td>';
+        echo '<td data-title="Date">'.$intlDateFormatter->format(strtotime($result['date_changement'])). '</td>';
+        echo '<td data-title="Etage">'.$result['etage'].'</td>';
+        echo '<td data-title="Position">'.$result['position'].'</td>';
+        echo '<td data-title="Puissance">'.$result['puissance_ampoule'].'</td>';
+        echo '<td data-title="Marque">'.$result['marque_ampoule'].'</td>';
+        echo '<td title="Modifier"><a href="modify.php?edit=1&id='.$result['id'].'"><i class="far fa-edit fa-2x" style="color:black;"></i></a></td>';
+        echo '<td title="Supprimer"><a href="delete.php?id='.$result['id'].'" class="btn_delete" ><i class="far fa-trash-alt fa-2x" style="color:#fe5f55;"></i></a></td>';
     }
-?>
-
-
-
-    
-    <?php
-    if (count($result)===0){
+?>    
+<?php
+    if (count($results)===0){
         echo'<p>Il n\'y a aucune donnée à afficher</p>';
     }
-    
-    ?>
+?>
 </table>
 </div>
     <div class="container addbutton">
@@ -100,12 +94,11 @@ if(empty($_SESSION['username'])){
     <div id="modal_dialog" class="rounded border">
         <img src="images/warning.svg" alt="icon warning"></img>
         <h1>Êtes-vous sur ?</h1>
-        <p class="modal_text"> Voulez vous vraiment supprimer cette ligne ? <br>
-       Il vous sera impossible de la récupérer. </p>
+        <p class="modal_text"> Voulez vous vraiment supprimer cette ligne ? <br> Il vous sera impossible de la récupérer. </p>
         <div id="modal_area_btn">
         <button id="modal_btn_no" class="btn btn-light" >Annuler</button>
         <button id="modal_btn_yes" class="btn btn-danger">Supprimer</button>
-      </div>
+    </div>
     </div>
 </div>
 </main>

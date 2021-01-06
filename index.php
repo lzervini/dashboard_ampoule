@@ -10,23 +10,18 @@
         $sth->bindValue(':login', $username, PDO::PARAM_STR);
         $sth->execute();
         $data = $sth->fetch();
-//Récupère les infos de l'utilisateur
         if (isset($data['username'])) {
             $user = $data['username'];
             $password = $data['password'];
-//On vérifie que l'username & le password correspondent 
             if ($username == $user && $_POST['password'] == $password) {
-// Si oui, on démarre une session
                 session_start();
                 $_SESSION['username'] = $user;
                 header('Location: accueil.php');
             }
-//Sinon on renvoie sur une page d'erreur
         }else{
             header('Location: error.php');
         }
     }
-
 ?>
 
 <!DOCTYPE html>
