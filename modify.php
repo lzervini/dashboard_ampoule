@@ -79,7 +79,7 @@ if(empty($_SESSION['username'])){
             }
             $sth= $dbh->prepare($sql);
 
-        $sth->bindParam(':date_changement', strftime("%Y-%m-%d" , strtotime($dateChange)), PDO::PARAM_STR);
+        $sth->bindValue(':date_changement', strftime("%Y-%m-%d" , strtotime($dateChange)), PDO::PARAM_STR);
         $sth->bindParam(':etage', $etage, PDO::PARAM_STR);
         $sth->bindParam(':position', $position, PDO::PARAM_STR);
         $sth->bindParam(':puissance', $puissance, PDO::PARAM_STR);
@@ -146,17 +146,15 @@ if(empty($_SESSION['username'])){
                 <div class="pb-3">
                     <label for="etage">Numéro de l'étage :</label>
                     <select name='etage' id='etage' class="form-control" required>
-                    <option <?php if ($etage =='1'){echo "selected";}?>>1</option>
-                            <option <?php if ($etage =='2'){echo "selected";}?> >2</option>
-                            <option <?php if ($etage =='3'){echo "selected";}?> >3</option>
-                            <option <?php if ($etage =='4'){echo "selected";}?> >4</option>
-                            <option <?php if ($etage =='5'){echo "selected";}?> >5</option>
-                            <option <?php if ($etage =='6'){echo "selected";}?> >6</option>
-                            <option <?php if ($etage =='7'){echo "selected";}?> >7</option>
-                            <option <?php if ($etage =='8'){echo "selected";}?> >8</option>
-                            <option <?php if ($etage =='9'){echo "selected";}?> >9</option>
-                            <option <?php if ($etage =='10'){echo "selected";}?> >10</option>
-                            <option <?php if ($etage =='11'){echo "selected";}?> >11</option>
+                        <?php
+                            for ($i=0; $i<12; $i++){
+                                $selected = '';
+                                if ($etage == $i){
+                                    $selected = "selected";
+                                }
+                                echo '<option value="' .$i. '"' .$selected. '>' .$i.'</option>',"\n";
+                            }
+                            ?>
                     </select>
                 </div>
                 <div class="pb-3">
